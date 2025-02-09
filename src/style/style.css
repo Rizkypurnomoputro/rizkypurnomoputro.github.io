@@ -1,0 +1,123 @@
+:root {
+  --primary: #2b2b2b;
+  --color-primary: #e3e8ea;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: auto;
+}
+
+header {
+  display: flex;
+  background-color: var(--primary);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+header .logo {
+  margin-right: auto;
+  font-size: 2em;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.project-card {
+  background-color: var(--color-primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+}
+
+.project-card p {
+  font-size: 0.9em;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 26px;
+}
+.profile-img {
+  padding: 12px;
+  width: 20%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional: make the image circular */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    flex: 1 1 100%; /* 1 card per row on small screens */
+  }
+}
