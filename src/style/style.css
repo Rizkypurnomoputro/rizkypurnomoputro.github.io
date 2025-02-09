@@ -70,8 +70,11 @@ header .logo {
 }
 
 .project-card img {
-  max-width: 100%;
+  width: 80%;
+  height: auto;
   border-radius: 5px;
+  display: block;
+  margin: 0 auto; /* Center the image */
 }
 
 .project-card h3 {
